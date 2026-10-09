@@ -104,11 +104,9 @@ finpilot-ai/
 
 ---
 
-## 👥 Team
+## 👤 Author
 
-- **Shwetha Mithun** — Financial analytics, AML compliance background, 
-  business strategy
-- **Dhrumil Shah** — ML pipeline, model training, technical implementation
+- **Kartik Akhade**
 
 ---
 
