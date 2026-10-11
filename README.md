@@ -1,58 +1,50 @@
-# 💰 FinPilot AI — Smart Budget & Financial Advisor
+# 💰 FinPilot AI — Financial Research & Analysis Agent
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Pipeline-orange?style=flat-square)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green?style=flat-square)
-![Claude API](https://img.shields.io/badge/Claude-AI%20Advisor-purple?style=flat-square)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-red?style=flat-square)
+![LangGraph](https://img.shields.io/badge/LangGraph-Agent%20Workflows-orange?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-ChromaDB-green?style=flat-square)
+![Gemini](https://img.shields.io/badge/Gemini-1.5%20Flash-purple?style=flat-square)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen?style=flat-square)
 
 ---
 
 ## 📌 Project Overview
 
-**FinPilot AI** is an end-to-end machine learning pipeline and 
-AI-powered financial advisor built on a real-world personal finance 
-dataset of 32,424 users across 5 global regions.
+**FinPilot AI** is an LLM-powered financial research and analysis agent that uses **Retrieval-Augmented Generation (RAG)** to retrieve insights from financial reports and answer complex business queries.
 
-The project combines supervised learning (regression + multi-class 
-classification), rich exploratory data analysis, a rule-based budget 
-recommendation engine, and Claude AI to generate personalized 
-plain-English financial plans from a single CSV upload.
-
-> *"What if an AI could look at your finances and tell you exactly 
-> what to do next month? Not a generic tip. A real plan built just 
-> for you."*
+The system combines a **LangGraph ReAct agent** with four callable tools — financial ratio calculations, company performance comparison, risk analysis, and RAG-based document retrieval — to deliver analyst-grade financial intelligence through a conversational interface.
 
 ---
 
-## 🚀 What It Does
+## 🏗️ Architecture
 
-1. **Upload** a transaction CSV or bank statement
-2. **Categorize** every transaction automatically using Naive Bayes
-3. **Score** 4 financial health metrics against benchmarks from 
-   32,424 real users
-4. **Generate** a plain-English 5-part financial plan using Claude AI
-5. **Visualize** spending breakdown, goal timeline and health dashboard
-
----
-
-## 📊 Dataset
-
-**Kaggle Personal Finance ML Dataset**
-- 32,424 users across Africa, Asia, Europe, North America and Other
-- Key finding: 50.7% of users have poor credit scores below 580
-- Median savings rate: only 5% of income
+```
+User Query → Streamlit UI → LangGraph Agent (StateGraph)
+                                    ↓
+                             Router (ReAct Loop)
+                    ┌────────────┬────────────┬────────────┐
+                    ↓            ↓            ↓            ↓
+              RAG Tool     Ratio Tool  Compare Tool  Risk Tool
+                    ↓
+              ChromaDB ← PDF Reports (Apple, Microsoft, Tesla, ...)
+                    ↓
+              Gemini 1.5 Flash → Synthesized Answer + Citations
+```
 
 ---
 
-## 🤖 ML Models
+## 🚀 Features
 
-| Task | Models Used | Best Result |
-|---|---|---|
-| Expenses Prediction (Regression) | Ridge, Lasso, Random Forest, Extra Trees, Gradient Boosting | R² = 0.99+ |
-| Loan Risk Classification (Binary) | Logistic Regression, Decision Tree, Random Forest, MLP Neural Net | ROC-AUC = 0.99+ |
-| Savings Tier (Multi-Class) | Random Forest, Extra Trees, HistGradient Boosting | Accuracy = 0.99+ |
+- **RAG Pipeline** — Ingest PDF financial reports (10-K, annual reports) into ChromaDB; retrieve relevant excerpts with page-level citations
+- **AI Agent Workflows** — LangGraph `StateGraph` with a ReAct reasoning loop and multi-turn memory
+- **Tool Calling** — LLM selects and calls tools dynamically:
+  - `retrieve_financial_insights` — RAG search with company filtering
+  - `calculate_financial_ratios` — Net margin, ROE, ROA, Current Ratio, D/E, Asset Turnover, Gross Margin
+  - `compare_companies` — Side-by-side comparison of any two companies
+  - `analyze_risk` — Credit, market, operational, and liquidity risk analysis
+- **Personal Budget Dashboard** — CSV-based spending analysis with AI-powered advice
+- **Built-in Demo Data** — Synthetic Apple, Microsoft, and Tesla reports pre-loaded for instant demo
 
 ---
 
@@ -61,14 +53,12 @@ plain-English financial plans from a single CSV upload.
 | Layer | Technology |
 |---|---|
 | Language | Python 3.8+ |
-| ML | scikit-learn, scipy |
-| Data | pandas, numpy |
-| Visualization | matplotlib, seaborn, Plotly |
-| AI Advisor | Anthropic Claude API |
-| Backend | FastAPI + uvicorn |
-| Dashboard | Streamlit |
-| Database | SQLite |
-| Environment | Google Colab / Jupyter Notebook |
+| Agent Framework | LangGraph (StateGraph + ReAct) |
+| LLM | Google Gemini 1.5 Flash |
+| RAG | ChromaDB + sentence-transformers |
+| Document Parsing | pypdf + LangChain splitters |
+| ML (Budget Tab) | scikit-learn (Naive Bayes categorization) |
+| Dashboard | Streamlit + Plotly |
 
 ---
 
@@ -76,37 +66,62 @@ plain-English financial plans from a single CSV upload.
 
 ```
 finpilot-ai/
-├── Finpilot_AI.ipynb          # Main ML pipeline notebook
-├── generate_data.py           # Synthetic transaction data generator
-├── Personal_Finance_Dataset_1.csv  # Kaggle dataset
-└── README.md
+├── app/
+│   ├── agent/
+│   │   ├── graph.py          # LangGraph StateGraph definition
+│   │   ├── state.py          # AgentState TypedDict
+│   │   └── tools.py          # 4 LangChain @tool definitions
+│   └── rag/
+│       ├── embeddings.py     # sentence-transformers wrapper
+│       ├── ingestor.py       # PDF ingestion + ChromaDB storage
+│       └── retriever.py      # Vector search + citation formatting
+├── data/
+│   ├── reports/              # Place PDF reports here
+│   └── chroma_db/            # Persisted vector store (auto-created)
+├── streamlit_app.py          # Main UI (2-tab Streamlit app)
+├── generate_reports.py       # Synthetic report generator (demo data)
+├── generate_data.py          # Transaction data generator
+├── requirements.txt
+└── .env.example
 ```
 
 ---
 
-## 💡 Key Features
+## ⚡ Quick Start
 
-- **3 ML models** covering regression, binary and multi-class tasks
-- **26 visualizations** including distributions, correlation heatmaps, 
-  ROC curves, learning curves and financial health dashboards
-- **Rule-based recommendation engine** with personalized financial advice
-- **Claude AI integration** for plain-English 5-part financial plans
-- **What-If scenario engine** — change one input, see the full impact
-- **Benchmarks from real data** — every threshold derived from 32,424 users
+```bash
+# 1. Clone and install
+git clone https://github.com/yourusername/finpilot-ai
+cd finpilot-ai
+pip install -r requirements.txt
+
+# 2. Set up your API key
+cp .env.example .env
+# Edit .env and add your GOOGLE_API_KEY
+# Get a free key at: https://aistudio.google.com/
+
+# 3. (Optional) Pre-seed demo data
+python generate_reports.py
+
+# 4. Run the app
+streamlit run streamlit_app.py
+```
 
 ---
 
-## 🌍 Orion Build Challenge on AI Hackathon
+## 💬 Example Queries
 
-**Track:** Fintech | **Category:** Personal Finance AI
-
-*Built for the 3.5 billion people who have never had a financial advisor.*
+- *"What are Apple's main risk factors in their 2023 annual report?"*
+- *"Compare Apple and Microsoft's profit margins"*
+- *"Calculate ratios: revenue $384B, net income $97B, assets $353B, equity $62B, current assets $143B, current liabilities $145B, debt $111B"*
+- *"Analyze Tesla's liquidity risk"*
+- *"What is Microsoft's Azure revenue growth rate?"*
 
 ---
 
 ## 👤 Author
 
-- **Kartik Akhade**
+**Kartik Akhade**
 
 ---
 
