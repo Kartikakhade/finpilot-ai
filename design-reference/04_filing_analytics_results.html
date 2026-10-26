@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#00201c", "primary-container": "#2dd4bf", "surface-container-high": "#25293a", "on-surface": "#dee1f9", "on-tertiary-fixed": "#101c2f", "on-secondary": "#243142", "surface-container-highest": "#2f3446", "surface": "#0e1323", "on-primary-fixed-variant": "#005047", "on-tertiary": "#263045", "on-error": "#690005", "on-secondary-fixed": "#0e1c2c", "surface-container": "#1a1f30", "on-tertiary-fixed-variant": "#3c475d", "surface-container-lowest": "#080d1d", "tertiary-fixed-dim": "#bcc6e1", "surface-tint": "#3cddc7", "outline-variant": "#3c4a46", "on-surface-variant": "#bacac5", "on-primary": "#003731", "surface-bright": "#34394a", "secondary-fixed": "#d5e4f9", "primary-fixed-dim": "#3cddc7", "inverse-surface": "#dee1f9", "tertiary-fixed": "#d8e2fe", "secondary-fixed-dim": "#b9c8dc", "on-error-container": "#ffdad6", "error-container": "#93000a", "on-tertiary-container": "#424d63", "surface-variant": "#2f3446", "on-primary-container": "#00574d", "inverse-on-surface": "#2b3041", "surface-dim": "#0e1323", "surface-container-low": "#161b2b", "background": "#0e1323", "tertiary-container": "#b3bed8", "tertiary": "#cfdaf5", "on-secondary-container": "#a8b6cb", "secondary-container": "#3a4859", "outline": "#859490", "secondary": "#b9c8dc", "primary": "#57f1db", "on-background": "#dee1f9", "on-secondary-fixed-variant": "#3a4859", "primary-fixed": "#62fae3", "error": "#ffb4ab", "inverse-primary": "#006b5f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1rem", "gutter": "1rem", "space-md": "0.75rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "margin": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-sm": ["Hanken Grotesk"], "metric-mono": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "title-md": ["Manrope"], "display-lg": ["Manrope"], "headline-sm": ["Manrope"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "metric-mono": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 select-none"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20"><div class="w-7 h-7 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary font-headline-sm text-headline-sm font-semibold"><span class="material-symbols-outlined text-[18px]">neurology</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface leading-none">FinPilot</span><span class="font-label-sm text-label-sm font-semibold text-primary leading-none uppercase">AI</span></div><span class="font-label-sm text-[10px] text-on-surface-variant/80 tracking-tight truncate mt-0.5">Financial Intelligence Suite</span></div></div><div class="px-space-md pt-space-md"><div class="text-label-sm font-label-sm uppercase text-on-surface-variant/60 tracking-wider mb-space-xs px-space-xs">Intelligence Workspaces</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financial-research" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Financial Research</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="personal-budget" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Personal Budget</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="knowledge-base" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span>Knowledge Base</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded transition-colors bg-surface-container-high text-primary font-medium border-l-2 border-primary" data-path="filing-analytics" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span>Filing Analytics</span></a></nav></div></div><div class="flex flex-col border-t border-outline-variant/20 p-space-md gap-space-sm bg-surface-container-lowest"><div class="rounded bg-surface-container-low p-2 border border-outline-variant/30 flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Gemini 1.5 Pro</span><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex items-center justify-between text-[10px] text-on-surface-variant/70 font-metric-mono"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-primary">dns</span>Backend API</span><span class="text-primary">Connected</span></div></div><div class="flex items-center justify-between pt-1"><div class="flex items-center gap-2 overflow-hidden"><div class="w-6 h-6 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-[10px] text-on-surface-variant font-label-sm">SA</div><div class="flex flex-col truncate"><span class="font-label-sm text-[11px] text-on-surface font-medium truncate">Senior Analyst</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase tracking-wider">Pro Plan</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-[16px]">first_page</span></button></div></div></aside><div class="pl-60 min-h-screen flex flex-col bg-surface"><header class="fixed top-0 left-60 right-0 h-14 bg-surface/90 backdrop-blur-md z-40 border-b border-outline-variant/30 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant/30"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface">Gemini 1.5 Pro Flash</span><span class="text-on-surface-variant/50 text-[10px]">|</span><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Low Latency</span></div><div class="hidden md:flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/20 text-on-surface-variant font-label-sm text-[11px]"><span class="material-symbols-outlined text-[13px] text-primary">cloud_done</span><span>Prod US-East</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:border-primary-container/60 hover:text-on-surface text-body-sm font-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">search</span><span class="hidden sm:inline">Search filings, tickers, tables...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-metric-mono text-on-surface-variant border border-outline-variant/30">⌘K</kbd></button><div class="flex items-center gap-1.5"><button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary"></span></button><button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="h-5 w-px bg-outline-variant/30 mx-1"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1U5LVHZlq7qzYcOergpC8RQu5dZgTUyLhXFQpgAY6ETJ7kKRhVt8TQAOXGxR2YyCGdMB7_Sead1lQeNRMvq3lMdG6J3sdA8fvcyxB2e3xGEWjohaGxM1QpyHiYuOr_2wnLjKbC-lQRnmG030xcgRuejsUoTKRzBf34CggR4NREhLi2lVJqCoWlimDCqY8tU8OS7kDzpFBi3yruckWOeYOkgmf7pkrJerj3BCbHcGPKAjIcKfkWWenHwoj7u"/></div></div></header><main class="relative pt-14 w-full flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-margin-desktop max-w-[1600px] w-full mx-auto flex flex-col gap-space-lg">
+<!-- Disclaimer Header Banner -->
+<div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">
+          All displayed values are illustrative financial research simulations for demonstration purposes. Grounded with EDGAR CIK: 0000320193.
+        </span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="inline-flex items-center gap-1 font-metric-mono text-label-sm text-primary bg-primary/10 px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          CONFIDENCE 99.4%
+        </span>
+</div>
+</div>
+<!-- Corporate Analysis Title & Actions -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<svg class="w-4 h-4 text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.66-.82 1.11-1.96.99-3.1-.96.04-2.12.64-2.8 1.44-.6.69-1.12 1.83-1 2.96 1.07.08 2.16-.48 2.81-1.3z"></path>
+</svg>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Apple Inc. (NASDAQ: AAPL) — FY2023 Form 10-K Comprehensive Deep Dive
+          </h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Source-grounded AI agent synthesis across 132 filed pages, MD&A, and consolidated financial notes.
+        </p>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">calendar_today</span>
+            Fiscal Year Ended Sep 30, 2023
+          </span>
+<span class="text-outline-variant/60">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">verified</span>
+            Auditor: Ernst & Young LLP
+          </span>
+<span class="text-outline-variant/60">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">description</span>
+            Filing Date: Nov 3, 2023
+          </span>
+<span class="text-outline-variant/60">•</span>
+<span class="inline-flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+            Agent Version 3.4.1
+          </span>
+</div>
+</div>
+<!-- Action Suite -->
+<div class="flex flex-wrap items-center gap-2 pt-2 xl:pt-0">
+<button class="h-8 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">picture_as_pdf</span>
+<span>Download PDF Report</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">table_view</span>
+<span>Export to Excel / CSV</span>
+</button>
+<button class="h-8 px-3 rounded bg-primary-container hover:bg-surface-tint text-on-primary font-title-md text-body-sm transition-colors flex items-center gap-1.5 shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">chat_bubble</span>
+<span>Ask Follow-up in Research Chat</span>
+</button>
+</div>
+</div>
+<!-- Key Financial Highlights Bar (4 Bento Stat Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Revenue -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Net Sales</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-metric-mono font-medium text-error bg-error/10">
+            -2.8% YoY
+          </span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-headline-lg">
+            $383.29B
+          </div>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>FY2022: $394.33B</span>
+<span class="font-metric-mono text-[11px] text-secondary">82% Hardware / 18% Svc</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container/60 rounded px-2 py-1 flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">Services Momentum</span>
+<span class="font-metric-mono text-primary font-medium">$85.20B (+9.1%)</span>
+</div>
+</div>
+<!-- Net Income -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary/5 blur-xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Net Income</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-metric-mono font-medium text-error bg-error/10">
+            -2.8% YoY
+          </span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            $97.00B
+          </div>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>FY2022: $99.80B</span>
+<span class="font-metric-mono text-[11px] text-primary">25.3% Net Margin</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container/60 rounded px-2 py-1 flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">Pre-Tax Return</span>
+<span class="font-metric-mono text-on-surface font-medium">$113.75B (29.7%)</span>
+</div>
+</div>
+<!-- Operating Cash Flow -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Operating Cash Flow</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-metric-mono font-medium text-primary bg-primary/10">
+            114% Conversion
+          </span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            $110.54B
+          </div>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Free Cash Flow: $99.58B</span>
+<span class="font-metric-mono text-[11px] text-primary">High Quality</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container/60 rounded px-2 py-1 flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">CapEx Allocation</span>
+<span class="font-metric-mono text-on-surface font-medium">$10.96B (Strict Discipline)</span>
+</div>
+</div>
+<!-- Diluted EPS -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Diluted EPS</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-metric-mono font-medium text-primary bg-primary/10">
+            +0.3% YoY
+          </span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            $6.13
+          </div>
+<div class="flex items-center justify-between mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>FY2022: $6.11</span>
+<span class="font-metric-mono text-[11px] text-secondary">Buyback Accretion</span>
+</div>
+</div>
+<div class="mt-3 pt-2 bg-surface-container/60 rounded px-2 py-1 flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">Shares Retired</span>
+<span class="font-metric-mono text-primary font-medium">-2.8% Float Reduction</span>
+</div>
+</div>
+</div>
+<!-- Executive Summary & Strategic Findings -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-4 rounded bg-primary"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Executive Summary & Core Findings</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-metric-mono">SYNTHESIS CONFIDENCE: 98.7%</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<div class="lg:col-span-2 space-y-3 font-body-md text-body-md text-on-surface leading-relaxed">
+<p>
+            Apple Inc.’s FY2023 Form 10-K illustrates operational resilience against macro hardware deceleration. Despite consolidated net sales contracting by <span class="font-metric-mono text-on-surface font-medium">2.8%</span> to <span class="font-metric-mono text-on-surface font-medium">$383.29B</span> (driven by headwinds across Mac and iPad demand cycles following the pandemic refresh peak), profitability metrics expanded. Gross margins widened <span class="text-primary font-medium">+80 bps to 44.1%</span>, propelled by an increasingly lucrative mix shift toward digital Services alongside internal silicon cost advantages.
+          </p>
+<p>
+            The Services segment achieved an all-time revenue record of <span class="font-metric-mono text-on-surface font-medium">$85.20B</span> (+9.1% YoY), boasting gross margins of <span class="font-metric-mono text-primary font-medium">70.8%</span> compared to Products gross margin of <span class="font-metric-mono text-on-surface font-medium">36.5%</span>. This software-driven margin dampening cushioned a 2.4% contraction in iPhone sales ($200.58B vs. $205.49B).
+          </p>
+<p>
+            Capital allocation maintained disciplined continuity: Apple returned over <span class="font-metric-mono text-on-surface font-medium">$77.55B</span> through share repurchases and <span class="font-metric-mono text-on-surface font-medium">$15.03B</span> in dividends, successfully maintaining modest EPS expansion despite top-line contraction. Net debt leverage posture remains moderate, with cash and marketable securities totaling <span class="font-metric-mono text-on-surface font-medium">$162.10B</span> against <span class="font-metric-mono text-on-surface font-medium">$111.09B</span> in term debt.
+          </p>
+</div>
+<!-- Revenue Segment Breakdown Graphic -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-title-md text-title-md text-on-surface">Revenue Mix Velocity</span>
+<span class="font-metric-mono text-[11px] text-on-surface-variant">FY23 Breakdown</span>
+</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">iPhone</span>
+<span class="font-metric-mono text-on-surface">$200.58B (52.3%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary" style="width: 52.3%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">Services</span>
+<span class="font-metric-mono text-primary">$85.20B (22.2%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 22.2%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">Wearables, Home & Acc.</span>
+<span class="font-metric-mono text-on-surface">$39.85B (10.4%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary" style="width: 10.4%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">Mac Hardware</span>
+<span class="font-metric-mono text-on-surface">$29.36B (7.7%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-container" style="width: 7.7%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm mb-1">
+<span class="text-on-surface">iPad</span>
+<span class="font-metric-mono text-on-surface">$28.30B (7.4%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary-container" style="width: 7.4%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Services Margin Expansion:</span>
+<span class="font-metric-mono text-primary font-medium">+200 bps YoY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Financial Ratios & Benchmark Table -->
+<div class="rounded-xl bg-surface-container-low shadow-sm flex flex-col overflow-hidden">
+<!-- Table Header & Controls -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-4 rounded bg-primary"></div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Financial Ratios & Benchmark Assessment</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Cross-sectional analysis compared to S&P 500 Mega-Cap Technology peers</p>
+</div>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="inline-flex p-1 rounded-lg bg-surface-container-lowest gap-1">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container text-primary font-medium transition-colors shadow-sm" id="tab-btn-prof" onclick="switchRatioTab('prof')" type="button">
+            Profitability Ratios
+          </button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" id="tab-btn-liq" onclick="switchRatioTab('liq')" type="button">
+            Liquidity & Solvency
+          </button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" id="tab-btn-dup" onclick="switchRatioTab('dup')" type="button">
+            Efficiency & DuPont
+          </button>
+</div>
+</div>
+<!-- Ratio Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider h-9">
+<th class="px-space-md py-2 font-medium">Ratio Metric</th>
+<th class="px-space-md py-2 font-medium text-right">FY2022</th>
+<th class="px-space-md py-2 font-medium text-right">FY2023</th>
+<th class="px-space-md py-2 font-medium text-right">Peer Benchmark</th>
+<th class="px-space-md py-2 font-medium text-right">Variance / Delta</th>
+<th class="px-space-md py-2 font-medium text-center">Health Check</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 font-body-md text-body-md text-on-surface" id="ratio-table-body">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Gross Profit Margin</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Gross Profit / Net Sales">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">43.3%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">44.1%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">38.4%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-primary font-medium">+570 bps</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-primary bg-primary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Superior
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Operating Margin (EBIT)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Operating Income / Net Sales">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">30.3%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">29.8%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">24.2%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-primary font-medium">+560 bps</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-primary bg-primary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Superior
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Net Profit Margin</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Net Income / Net Sales">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">25.3%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">25.3%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">20.8%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-secondary font-medium">+450 bps</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-secondary bg-secondary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Neutral
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Return on Equity (ROE)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Net Income / Average Shareholders Equity">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">175.4%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">156.1%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">32.5%</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-primary font-medium">+1,236 bps</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-primary bg-primary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Superior
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Current Ratio</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Total Current Assets / Total Current Liabilities">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">0.88x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">0.99x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">1.45x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-secondary font-medium">-0.46x</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-secondary bg-secondary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Neutral
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Quick Ratio (Acid-Test)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Liquid Assets / Current Liabilities">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">0.70x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">0.85x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">1.18x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-secondary font-medium">-0.33x</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-secondary bg-secondary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Neutral
+                </span>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container/60 transition-colors h-11">
+<td class="px-space-md py-2 font-medium flex items-center gap-2">
+<span>Debt-to-Equity Ratio</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant/60 cursor-help" title="Total Debt / Total Shareholders Equity">info</span>
+</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">2.37x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface font-semibold">1.79x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-on-surface-variant">0.65x</td>
+<td class="px-space-md py-2 text-right font-metric-mono text-error font-medium">+1.14x</td>
+<td class="px-space-md py-2 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold text-error bg-error/10">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Monitored Leverage
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-2 bg-surface-container-lowest flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>*Industry benchmark aggregate derived from top 15 constituents of S&P Information Technology Index.</span>
+<span class="font-metric-mono">DATASET RECONCILED: 2023-11-04</span>
+</div>
+</div>
+<!-- Risk Assessment & Factor Analysis (Item 1A 10-K breakdown) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-4 rounded bg-primary"></div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Item 1A Risk Factor Breakdown</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Natural language classification and materiality severity indexing</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Core Exposure Clusters Identified</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Risk 1 -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col justify-between relative group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-metric-mono">CLUSTER #01</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold text-on-surface bg-secondary-container">
+                Moderate-High
+              </span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              Supply Chain & Manufacturing Concentration
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Substantially all manufacturing partner facilities and specialized component providers remain clustered in East Asia (principally Mainland China, Taiwan, and Vietnam). Geopolitical friction, maritime shipping disruptions, or regional trade sanctions could trigger irreversible single-quarter assembly bottlenecks.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-metric-mono">10-K Reference: p. 12-14</span>
+<span class="text-primary font-medium flex items-center gap-1 cursor-pointer hover:underline">
+              Inspect Citation <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Risk 2 -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col justify-between relative group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-metric-mono">CLUSTER #02</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold text-error bg-error/10">
+                High Materiality
+              </span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              Digital Services Regulatory Scrutiny
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Heightened anti-steering enforcement under the European Union Digital Markets Act (DMA) mandates alternative app marketplace sideloading and external payment rails. Management acknowledges these mandates may compress high-margin App Store take rates (historically 15%-30%) and elevate cybersecurity liability.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-metric-mono">10-K Reference: p. 17-19</span>
+<span class="text-primary font-medium flex items-center gap-1 cursor-pointer hover:underline">
+              Inspect Citation <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Risk 3 -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col justify-between relative group hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-metric-mono">CLUSTER #03</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-label-sm font-semibold text-primary bg-primary/10">
+                Low-Moderate
+              </span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              Foreign Exchange Volatility
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Approximately 58% of FY2023 net sales were generated outside the United States. Sustained USD strength exerts downward pressure on translated top-line results and crimps foreign consumer purchasing power in Europe and emerging markets, partially offset by rolling cash-flow hedging derivatives.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-metric-mono">10-K Reference: p. 23-25</span>
+<span class="text-primary font-medium flex items-center gap-1 cursor-pointer hover:underline">
+              Inspect Citation <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Source Citations & Audit Verification Panel -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-4 rounded bg-primary"></div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Source Citations & Audit Verification</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Immutable links to filed SEC EDGAR Form 10-K records and footnotes</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          Cryptographically Verified
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Citation Card 1 -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1 font-metric-mono text-label-sm text-primary bg-primary/10 px-2 py-0.5 rounded">
+                CITATION #01
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Page 31-35</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              Item 7. Management's Discussion and Analysis — Results of Operations
+            </h4>
+<div class="rounded bg-surface-container-lowest p-space-sm text-body-sm font-body-sm text-on-surface-variant border-l-2 border-primary italic">
+              "Total net sales decreased 3% or $11.0 billion during 2023 compared to 2022, primarily driven by lower net sales of Mac and iPad, partially offset by higher net sales of Services. Products gross margin expanded primarily due to cost efficiencies..."
+            </div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Target Anchor: <span class="font-metric-mono text-on-surface">#item-7-results-ops</span></span>
+<a class="text-primary hover:underline flex items-center gap-1" href="#">
+              Open EDGAR Source <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Citation Card 2 -->
+<div class="rounded-lg bg-surface-container p-space-md flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1 font-metric-mono text-label-sm text-primary bg-primary/10 px-2 py-0.5 rounded">
+                CITATION #02
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Page 52</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold mb-2">
+              Note 10 — Debt and Financing Commitments
+            </h4>
+<div class="rounded bg-surface-container-lowest p-space-sm text-body-sm font-body-sm text-on-surface-variant border-l-2 border-secondary italic">
+              "As of September 30, 2023, the Company had outstanding term debt of $111.1 billion across fixed-rate notes with maturities ranging from 2024 to 2062. The effective interest rates ranged from 0.00% to 4.85%."
+            </div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Target Anchor: <span class="font-metric-mono text-on-surface">#note-10-term-debt</span></span>
+<a class="text-primary hover:underline flex items-center gap-1" href="#">
+              Open EDGAR Source <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Agent Tool Activity Execution Trace (Expandable) -->
+<div class="rounded-xl bg-surface-container-low shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between bg-surface-container-low hover:bg-surface-container transition-colors text-left" onclick="toggleTraceAccordion()" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Agent Tool Activity Execution Trace</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/10 text-primary font-metric-mono text-[10px] font-medium">3 Tools Invoked</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Deterministic tool execution log & parameter resolution history</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-metric-mono text-label-sm text-on-surface-variant" id="trace-status-text">Show Trace (124ms)</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant transition-transform duration-200" id="trace-chevron">expand_more</span>
+</div>
+</button>
+<div class="hidden p-space-md pt-0 bg-surface-container-low border-t border-outline-variant/10" id="trace-content">
+<div class="space-y-2 mt-space-sm font-metric-mono text-label-sm">
+<!-- Step 1 -->
+<div class="p-2.5 rounded bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">01</span>
+<span class="text-secondary font-medium">vector_search_filings</span>
+<span class="text-on-surface-variant truncate">("AAPL", query: "Item 1A risk factors and cyber regulatory", top_k: 8)</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-on-surface-variant text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-primary"></span> 200 OK</span>
+<span>latency: 42ms</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-2.5 rounded bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">02</span>
+<span class="text-secondary font-medium">compute_financial_ratios</span>
+<span class="text-on-surface-variant truncate">(balance_sheet_2023, income_stmt_2023, cf_stmt_2023, peer_group: "SP500_TECH")</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-on-surface-variant text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-primary"></span> 200 OK</span>
+<span>latency: 18ms</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-2.5 rounded bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">03</span>
+<span class="text-secondary font-medium">verify_audit_opinions</span>
+<span class="text-on-surface-variant truncate">(auditor: "Ernst & Young LLP", target_opinion: "Unqualified / Clean")</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-on-surface-variant text-[11px]">
+<span class="text-primary flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-primary"></span> 200 OK</span>
+<span>latency: 64ms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Global Analyst Grounding Note -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-space-md py-3 rounded-lg bg-surface-container-lowest text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>FinPilot Quantitative Grounding Engine v4.2 • Deterministic Parse Hash: <code>0x9f4a...29b1</code></span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hover:text-on-surface cursor-pointer">SEC EDGAR Direct Feed</span>
+<span>•</span>
+<span class="hover:text-on-surface cursor-pointer">Methodology Documentation</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleTraceAccordion() {
+    const content = document.getElementById('trace-content');
+    const chevron = document.getElementById('trace-chevron');
+    const statusText = document.getElementById('trace-status-text');
+    const isHidden = content.classList.contains('hidden');
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      chevron.style.transform = 'rotate(180deg)';
+      statusText.textContent = 'Hide Trace';
+    } else {
+      content.classList.add('hidden');
+      chevron.style.transform = 'rotate(0deg)';
+      statusText.textContent = 'Show Trace (124ms)';
+    }
+  }
+
+  function switchRatioTab(category) {
+    const btnProf = document.getElementById('tab-btn-prof');
+    const btnLiq = document.getElementById('tab-btn-liq');
+    const btnDup = document.getElementById('tab-btn-dup');
+
+    [btnProf, btnLiq, btnDup].forEach(btn => {
+      btn.className = "px-3 py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors";
+    });
+
+    const activeClasses = "px-3 py-1 rounded font-label-sm text-label-sm bg-surface-container text-primary font-medium transition-colors shadow-sm";
+
+    if (category === 'prof') {
+      btnProf.className = activeClasses;
+    } else if (category === 'liq') {
+      btnLiq.className = activeClasses;
+    } else if (category === 'dup') {
+      btnDup.className = activeClasses;
+    }
+  }
+</script></main></div></body></html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#00201c", "primary-container": "#2dd4bf", "surface-container-high": "#25293a", "on-surface": "#dee1f9", "on-tertiary-fixed": "#101c2f", "on-secondary": "#243142", "surface-container-highest": "#2f3446", "surface": "#0e1323", "on-primary-fixed-variant": "#005047", "on-tertiary": "#263045", "on-error": "#690005", "on-secondary-fixed": "#0e1c2c", "surface-container": "#1a1f30", "on-tertiary-fixed-variant": "#3c475d", "surface-container-lowest": "#080d1d", "tertiary-fixed-dim": "#bcc6e1", "surface-tint": "#3cddc7", "outline-variant": "#3c4a46", "on-surface-variant": "#bacac5", "on-primary": "#003731", "surface-bright": "#34394a", "secondary-fixed": "#d5e4f9", "primary-fixed-dim": "#3cddc7", "inverse-surface": "#dee1f9", "tertiary-fixed": "#d8e2fe", "secondary-fixed-dim": "#b9c8dc", "on-error-container": "#ffdad6", "error-container": "#93000a", "on-tertiary-container": "#424d63", "surface-variant": "#2f3446", "on-primary-container": "#00574d", "inverse-on-surface": "#2b3041", "surface-dim": "#0e1323", "surface-container-low": "#161b2b", "background": "#0e1323", "tertiary-container": "#b3bed8", "tertiary": "#cfdaf5", "on-secondary-container": "#a8b6cb", "secondary-container": "#3a4859", "outline": "#859490", "secondary": "#b9c8dc", "primary": "#57f1db", "on-background": "#dee1f9", "on-secondary-fixed-variant": "#3a4859", "primary-fixed": "#62fae3", "error": "#ffb4ab", "inverse-primary": "#006b5f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1rem", "gutter": "1rem", "space-md": "0.75rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "margin": "1rem", "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-sm": ["Hanken Grotesk"], "metric-mono": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "headline-lg": ["Manrope"], "headline-md": ["Manrope"], "title-md": ["Manrope"], "display-lg": ["Manrope"], "headline-sm": ["Manrope"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" }], "metric-mono": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["15px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest z-50 flex flex-col justify-between border-r border-outline-variant/30 select-none"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20"><div class="w-7 h-7 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary font-headline-sm text-headline-sm font-semibold"><span class="material-symbols-outlined text-[18px]">neurology</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface leading-none">FinPilot</span><span class="font-label-sm text-label-sm font-semibold text-primary leading-none uppercase">AI</span></div><span class="font-label-sm text-[10px] text-on-surface-variant/80 tracking-tight truncate mt-0.5">Financial Intelligence Suite</span></div></div><div class="px-space-md pt-space-md"><div class="text-label-sm font-label-sm uppercase text-on-surface-variant/60 tracking-wider mb-space-xs px-space-xs">Intelligence Workspaces</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financial-research" href="#"><span class="material-symbols-outlined text-[18px]">insights</span><span>Financial Research</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="personal-budget" href="#"><span class="material-symbols-outlined text-[18px]">account_balance_wallet</span><span>Personal Budget</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded transition-colors bg-surface-container-high text-primary font-medium border-l-2 border-primary" data-path="knowledge-base" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span>Knowledge Base</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="filing-analytics" href="#"><span class="material-symbols-outlined text-[18px]">table_chart</span><span>Filing Analytics</span></a></nav></div></div><div class="flex flex-col border-t border-outline-variant/20 p-space-md gap-space-sm bg-surface-container-lowest"><div class="rounded bg-surface-container-low p-2 border border-outline-variant/30 flex flex-col gap-1.5"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Gemini 1.5 Pro</span><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span></div><div class="flex items-center justify-between text-[10px] text-on-surface-variant/70 font-metric-mono"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[12px] text-primary">dns</span>Backend API</span><span class="text-primary">Connected</span></div></div><div class="flex items-center justify-between pt-1"><div class="flex items-center gap-2 overflow-hidden"><div class="w-6 h-6 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-[10px] text-on-surface-variant font-label-sm">SA</div><div class="flex flex-col truncate"><span class="font-label-sm text-[11px] text-on-surface font-medium truncate">Senior Analyst</span><span class="font-label-sm text-[9px] text-on-surface-variant uppercase tracking-wider">Pro Plan</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-[16px]">first_page</span></button></div></div></aside><div class="pl-60 min-h-screen flex flex-col bg-surface"><header class="fixed top-0 left-60 right-0 h-14 bg-surface/90 backdrop-blur-md z-40 border-b border-outline-variant/30 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant/30"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface">Gemini 1.5 Pro Flash</span><span class="text-on-surface-variant/50 text-[10px]">|</span><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Low Latency</span></div><div class="hidden md:flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/20 text-on-surface-variant font-label-sm text-[11px]"><span class="material-symbols-outlined text-[13px] text-primary">cloud_done</span><span>Prod US-East</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-2 px-3 py-1 rounded bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:border-primary-container/60 hover:text-on-surface text-body-sm font-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">search</span><span class="hidden sm:inline">Search filings, tickers, tables...</span><kbd class="px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-metric-mono text-on-surface-variant border border-outline-variant/30">⌘K</kbd></button><div class="flex items-center gap-1.5"><button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-primary"></span></button><button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="h-5 w-px bg-outline-variant/30 mx-1"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida/AEtjO1U5LVHZlq7qzYcOergpC8RQu5dZgTUyLhXFQpgAY6ETJ7kKRhVt8TQAOXGxR2YyCGdMB7_Sead1lQeNRMvq3lMdG6J3sdA8fvcyxB2e3xGEWjohaGxM1QpyHiYuOr_2wnLjKbC-lQRnmG030xcgRuejsUoTKRzBf34CggR4NREhLi2lVJqCoWlimDCqY8tU8OS7kDzpFBi3yruckWOeYOkgmf7pkrJerj3BCbHcGPKAjIcKfkWWenHwoj7u"/></div></div></header><main class="relative pt-14 w-full flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-header / Workspace Action Bar -->
+<div class="px-gutter-desktop py-space-lg flex flex-col md:flex-row md:items-end justify-between gap-space-md bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-metric-mono text-label-sm uppercase tracking-wider">Vector Store v2.4</span>
+<span class="inline-flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Vector DB synced
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight mt-0.5">Knowledge Base</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Manage corporate filings available to your AI research agent. Semantic indexing parses financial statements, footnotes, and auditor disclosures into high-precision vectors.
+      </p>
+<div class="flex items-center gap-space-sm pt-1 text-on-surface-variant font-metric-mono text-body-sm">
+<span class="text-on-surface font-medium">3 Active Filings Indexed</span>
+<span>•</span>
+<span>384 pages total</span>
+<span>•</span>
+<span class="text-primary font-semibold">4,090 embeddings active</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-8 px-space-md rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">download_for_offline</span>
+<span>Load Demo Reports</span>
+</button>
+<button class="h-8 px-space-md rounded bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm" onclick="document.getElementById('upload-section').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>+ Upload Corporate Filing</span>
+</button>
+</div>
+</div>
+<div class="p-gutter-desktop flex flex-col gap-gutter-desktop">
+<!-- Demo Reports Quick Access Cards -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_stories</span>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface uppercase tracking-wide text-[13px]">Pre-Indexed Benchmark Reports</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">SEC Form 10-K Corpus (Audited)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Apple -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-metric-mono font-bold text-label-sm text-on-surface">
+                  AAPL
+                </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Apple Inc.</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Report • Form 10-K</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Synced
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-space-md py-space-sm bg-surface-container-lowest/60 rounded px-space-sm">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Fiscal Period</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">FY 2023</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Pages / Chunks</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">132 pgs · 1,420</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="h-7 px-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+<span>Open Viewer</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-on-surface" title="Sync Status: Vectorized" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Remove Document" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Microsoft -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-metric-mono font-bold text-label-sm text-on-surface">
+                  MSFT
+                </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Microsoft Corporation</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Report • Form 10-K</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Synced
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-space-md py-space-sm bg-surface-container-lowest/60 rounded px-space-sm">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Fiscal Period</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">FY 2023</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Pages / Chunks</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">118 pgs · 1,290</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="h-7 px-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+<span>Open Viewer</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-on-surface" title="Sync Status: Vectorized" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Remove Document" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Tesla -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-metric-mono font-bold text-label-sm text-on-surface">
+                  TSLA
+                </div>
+<div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Tesla, Inc.</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Annual Report • Form 10-K</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[10px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Synced
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-space-md py-space-sm bg-surface-container-lowest/60 rounded px-space-sm">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Fiscal Period</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">FY 2023</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Pages / Chunks</span>
+<span class="font-metric-mono text-body-sm text-on-surface font-medium">134 pgs · 1,380</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="h-7 px-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+<span>Open Viewer</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-on-surface" title="Sync Status: Vectorized" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Remove Document" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Upload Corporate Filing Drag-and-Drop Area -->
+<div class="bg-surface-container-low rounded-xl p-gutter-desktop shadow-sm flex flex-col gap-space-lg" id="upload-section">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">upload_file</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ingest SEC Filings into RAG Pipeline</h2>
+</div>
+<div class="flex items-center gap-3 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> OCR Table Extractor v3</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Token Chunking: 512 with 64 overlap</span>
+</div>
+</div>
+<!-- Drag & Drop container -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-gutter-desktop flex flex-col items-center justify-center text-center transition-all group cursor-pointer hover:bg-surface-container-lowest" id="drop-zone">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:scale-105 transition-transform">
+<svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+</div>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface mb-1">Upload corporate filing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-space-md">
+          Drag and drop SEC Form 10-K, 10-Q, or 8-K PDF files up to 50MB. Text and tables are automatically parsed and vectorized for semantic search.
+        </p>
+<div class="flex items-center gap-space-sm mb-space-lg">
+<label class="h-8 px-4 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md cursor-pointer flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span>Browse Files</span>
+<input accept=".pdf" class="hidden" id="file-picker" type="file"/>
+</label>
+<span class="text-on-surface-variant/60 font-label-sm text-label-sm">or drop file here</span>
+</div>
+<!-- Inline Metadata Input Fields -->
+<div class="w-full max-w-3xl pt-space-md bg-surface-container-low/50 rounded-lg p-space-md flex flex-col md:flex-row items-center gap-space-md text-left">
+<div class="flex-1 w-full flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Company Name & Ticker</label>
+<input class="h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="e.g. NVIDIA Corp (NVDA)" type="text"/>
+</div>
+<div class="w-full md:w-44 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fiscal Year</label>
+<input class="h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-1 focus:ring-primary font-metric-mono" placeholder="e.g. FY 2024" type="text"/>
+</div>
+<div class="w-full md:w-36 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Form Type</label>
+<select class="h-9 px-2 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Form 10-K</option>
+<option>Form 10-Q</option>
+<option>Form 8-K</option>
+</select>
+</div>
+<div class="w-full md:w-auto md:self-end">
+<button class="w-full md:w-auto h-9 px-4 rounded bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+<span>Upload and Index Filing</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace Section: Indexed Filings + Parsing Diagnostic Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Data Table Area (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Table Filter Bar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm bg-surface-container-low p-2 rounded-lg">
+<div class="relative flex-1 min-w-[200px]">
+<span class="material-symbols-outlined text-[16px] absolute left-3 top-2 text-on-surface-variant">search</span>
+<input class="w-full h-8 pl-8 pr-3 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/50 focus:outline-none" placeholder="Search filings, CIK numbers, disclosures..." type="text"/>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<!-- Year filter dropdown -->
+<select class="h-8 px-2.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option>All Fiscal Years</option>
+<option>FY 2024</option>
+<option>FY 2023</option>
+<option>FY 2022</option>
+</select>
+<!-- Filing type dropdown -->
+<select class="h-8 px-2.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option>All Forms</option>
+<option>Form 10-K (Annual)</option>
+<option>Form 10-Q (Quarterly)</option>
+<option>Form 8-K (Current)</option>
+</select>
+<button class="h-8 w-8 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- High-Density Filings Ledger Table -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-8 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="px-space-md font-semibold">Document & Company</th>
+<th class="px-space-sm font-semibold">Type</th>
+<th class="px-space-sm font-semibold text-right">FY</th>
+<th class="px-space-sm font-semibold text-right">Size</th>
+<th class="px-space-sm font-semibold text-right">Chunks</th>
+<th class="px-space-sm font-semibold">Date Uploaded</th>
+<th class="px-space-sm font-semibold">Status</th>
+<th class="px-space-md font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Apple -->
+<tr class="h-12 hover:bg-surface-container/70 transition-colors group cursor-pointer" onclick="selectDiagnosticDoc('AAPL')">
+<td class="px-space-md">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-metric-mono text-[11px] font-bold text-primary shrink-0">
+                        AA
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate group-hover:text-primary transition-colors">Apple Inc. (AAPL)</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/70 truncate">form-10k-2023-audited.pdf</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-metric-mono text-label-sm text-on-surface">10-K</span>
+</td>
+<td class="px-space-sm text-right font-metric-mono text-body-md text-on-surface">2023</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface-variant">14.2 MB</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface font-semibold">1,420</td>
+<td class="px-space-sm font-metric-mono text-body-sm text-on-surface-variant">Nov 03, 2023</td>
+<td class="px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Ready for Query
+                    </span>
+</td>
+<td class="px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" title="Inspect Embeddings" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error" title="Delete" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Microsoft -->
+<tr class="h-12 bg-surface-container/30 hover:bg-surface-container transition-colors group cursor-pointer" onclick="selectDiagnosticDoc('MSFT')">
+<td class="px-space-md">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-metric-mono text-[11px] font-bold text-secondary shrink-0">
+                        MS
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate group-hover:text-primary transition-colors">Microsoft Corporation (MSFT)</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/70 truncate">msft-annual-report-2023.pdf</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-metric-mono text-label-sm text-on-surface">10-K</span>
+</td>
+<td class="px-space-sm text-right font-metric-mono text-body-md text-on-surface">2023</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface-variant">11.8 MB</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface font-semibold">1,290</td>
+<td class="px-space-sm font-metric-mono text-body-sm text-on-surface-variant">Aug 12, 2023</td>
+<td class="px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Ready for Query
+                    </span>
+</td>
+<td class="px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Tesla -->
+<tr class="h-12 hover:bg-surface-container/70 transition-colors group cursor-pointer" onclick="selectDiagnosticDoc('TSLA')">
+<td class="px-space-md">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-metric-mono text-[11px] font-bold text-tertiary shrink-0">
+                        TS
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate group-hover:text-primary transition-colors">Tesla, Inc. (TSLA)</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/70 truncate">tsla-form10k-fy2023-final.pdf</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-metric-mono text-label-sm text-on-surface">10-K</span>
+</td>
+<td class="px-space-sm text-right font-metric-mono text-body-md text-on-surface">2023</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface-variant">15.9 MB</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface font-semibold">1,380</td>
+<td class="px-space-sm font-metric-mono text-body-sm text-on-surface-variant">Jan 29, 2024</td>
+<td class="px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Ready for Query
+                    </span>
+</td>
+<td class="px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-error" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Example in-progress / queued -->
+<tr class="h-12 hover:bg-surface-container/70 transition-colors group opacity-75">
+<td class="px-space-md">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-6 h-6 rounded bg-surface-container-high flex items-center justify-center font-metric-mono text-[11px] font-bold text-on-surface-variant shrink-0">
+                        NV
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">NVIDIA Corporation (NVDA)</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant/70 truncate">nvda-q3-form10q-2024.pdf</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-metric-mono text-label-sm text-on-surface">10-Q</span>
+</td>
+<td class="px-space-sm text-right font-metric-mono text-body-md text-on-surface">2024</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface-variant">6.4 MB</td>
+<td class="px-space-sm text-right font-metric-mono text-body-sm text-on-surface-variant">542</td>
+<td class="px-space-sm font-metric-mono text-body-sm text-on-surface-variant">Just now</td>
+<td class="px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+                      Parsing Tables
+                    </span>
+</td>
+<td class="px-space-md text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-error" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-space-sm bg-surface-container-lowest/80 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Showing 4 of 4 filings in operational vector store</span>
+<div class="flex items-center gap-2">
+<span>Memory Footprint: 38.3 MB</span>
+<span>•</span>
+<span class="text-primary">Qdrant Cluster Active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Parse Diagnostics Contextual Drawer / Panel (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">query_stats</span>
+<h3 class="font-title-md text-title-md font-semibold text-on-surface">Parser Diagnostics</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-metric-mono text-label-sm text-primary" id="diag-ticker">AAPL Form 10-K</span>
+</div>
+<!-- Quality Metric Cards -->
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Table Confidence</span>
+<div class="flex items-baseline justify-between">
+<span class="font-metric-mono text-headline-sm font-semibold text-primary" id="diag-confidence">98.4%</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[98.4%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">OCR Pipeline Pass</span>
+<div class="flex items-baseline justify-between">
+<span class="font-metric-mono text-headline-sm font-semibold text-on-surface">Complete</span>
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Inline Parsing Breakdown Diagram -->
+<div class="bg-surface-container-lowest/60 rounded p-space-sm flex flex-col gap-2">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Document Structure Deconstruction</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1 border-b border-surface-container">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">table_rows</span>
+                Consolidated Balance Sheets
+              </span>
+<span class="font-metric-mono text-primary text-[12px]">28 Tables</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1 border-b border-surface-container">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">notes</span>
+                Notes to Financial Statements
+              </span>
+<span class="font-metric-mono text-on-surface-variant text-[12px]">684 Chunks</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1 border-b border-surface-container">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">shield</span>
+                Item 1A Risk Factors
+              </span>
+<span class="font-metric-mono text-on-surface-variant text-[12px]">312 Chunks</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface py-1">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">history_edu</span>
+                Auditor Opinion (PwC LLP)
+              </span>
+<span class="font-metric-mono text-primary text-[12px]">Extracted (Clean)</span>
+</div>
+</div>
+<!-- Semantic Embeddings Dimension Chart SVG -->
+<div class="bg-surface-container-lowest rounded p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Embedding Density Distribution</span>
+<span class="font-metric-mono text-[10px] text-primary">1536 dims</span>
+</div>
+<!-- Lightweight Sparkline Graphic -->
+<svg class="w-full h-12 text-primary" fill="none" viewbox="0 0 300 48">
+<defs>
+<lineargradient id="grad-dense" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="currentColor" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,40 Q30,12 60,25 T120,8 T180,30 T240,15 T300,20 L300,48 L0,48 Z" fill="url(#grad-dense)"></path>
+<path d="M0,40 Q30,12 60,25 T120,8 T180,30 T240,15 T300,20" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+<div class="flex justify-between font-metric-mono text-[10px] text-on-surface-variant">
+<span>Cosine sim: 0.89 avg</span>
+<span>Quantized: FP16</span>
+</div>
+</div>
+<!-- Test Vector Retrieval CTA -->
+<button class="w-full h-8 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">search_insights</span>
+<span>Test Semantic Retrieval On Filing</span>
+</button>
+</div>
+<!-- Additional Information Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-start gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface font-medium">SEC EDGAR Direct Feed</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+              Auto-ingest can be scheduled for target tickers to index newly submitted Form 8-Ks within 90 seconds of release.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectDiagnosticDoc(ticker) {
+    const tickerEl = document.getElementById('diag-ticker');
+    const confEl = document.getElementById('diag-confidence');
+    if (!tickerEl || !confEl) return;
+    
+    if (ticker === 'AAPL') {
+      tickerEl.innerText = 'AAPL Form 10-K';
+      confEl.innerText = '98.4%';
+    } else if (ticker === 'MSFT') {
+      tickerEl.innerText = 'MSFT Form 10-K';
+      confEl.innerText = '99.1%';
+    } else if (ticker === 'TSLA') {
+      tickerEl.innerText = 'TSLA Form 10-K';
+      confEl.innerText = '97.8%';
+    }
+  }
+
+  // Visual dropzone feedback
+  const dropZone = document.getElementById('drop-zone');
+  if (dropZone) {
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('bg-surface-container');
+    });
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('bg-surface-container');
+    });
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('bg-surface-container');
+    });
+  }
+</script></main></div></body></html>
